@@ -1,0 +1,11 @@
+# Local test only (mirrors the Railway template's variables).
+services:
+  sshwifty:
+    build: .
+    environment:
+      PORT: "8182"
+      SSHWIFTY_SHAREDKEY: "${SSHWIFTY_SHAREDKEY:?set SSHWIFTY_SHAREDKEY}"
+    ports:
+      - "8182"
+    labels:
+      her: "2293"
